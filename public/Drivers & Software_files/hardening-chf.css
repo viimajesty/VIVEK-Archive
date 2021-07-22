@@ -1,0 +1,17 @@
+﻿/* CHF CSS 
+FILE_CHANGED_ON = '2020-09-20 16:29:21'
+*/
+
+/*This is a custom rule for INTC*/
+@media screen and (max-width: 767px) {
+    .rwd .intc .recode50 .global-nav-redesign .intel-navbar .primary-nav-item:first-child .nav-l4-list {
+        display: block !important;
+    }
+}
+
+/*This is a custom rule for DRC*/
+@media screen and (max-width: 767px) {
+    .rwd .drc .recode50 .global-nav-redesign .intel-navbar .primary-nav-item:first-child .nav-l4-list {
+        display: block !important;
+    }
+}

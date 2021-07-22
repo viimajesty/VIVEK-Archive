@@ -1,0 +1,217 @@
+<HTML> 
+
+<HEAD>
+<TITLE>Parts of Speech Quiz</TITLE>
+</HEAD>
+
+<STYLE>
+body { font-family: Verdana; }
+
+
+html {
+        cursor: url("../files/custom.png"), url("../files/custom.cur"), default;
+    }
+</STYLE>
+<BODY> 
+
+<CENTER>
+<body bgcolor="#e2ecf6" data-new-gr-c-s-check-loaded="14.1015.0" data-gr-ext-installed="">
+		<table width="100%" border="0" cellspacing="2" cellpadding="0">
+			<tbody><tr>
+				
+				<td align="center" valign="top">
+					<h1>VIVEK Archive</h1>
+					We're Getting There 				
+				</td>
+			</tr>
+		</tbody></table>
+</CENTER>
+
+<H2>Parts of Speech Quiz</H2><BR>
+
+<form name="quiz" class="mcquiz">
+<p>1. I bought a <strong>beautiful</strong> dress at the mall.</p>
+<div class="ECnoprint" align="left">
+<input type="radio" name="q1" value="preposition"> preposition<br>
+<input type="radio" name="q1" value="adjective"> adjective<br>
+<input type="radio" name="q1" value="noun"> noun
+</div><HR><BR>
+
+
+<p>2. What did <strong>she</strong> ask you to do?</p>
+<div class="ECnoprint">
+<input type="radio" name="q2" value="conjunction"> conjunction<br> 
+<input type="radio" name="q2" value="preposition"> preposition<br>
+<input type="radio" name="q2" value="pronoun"> pronoun
+</div><HR><BR>
+
+
+<p>3. I left my shoes <strong>under</strong> the kitchen table.</p>
+<div class="ECnoprint">
+<input type="radio" name="q3" value="adjective"> adjective<br> 
+<input type="radio" name="q3" value="preposition"> preposition<br>
+<input type="radio" name="q3" value="pronoun"> pronoun
+</div><HR><BR>
+
+
+<p>4. If we finish our work <strong>quickly</strong> we can go to the movies.</p>
+<div class="ECnoprint">
+<input type="radio" name="q4" value="adverb"> adverb<br>
+<input type="radio" name="q4" value="conjunction"> conjunction<br>
+<input type="radio" name="q4" value="verb"> verb
+</div><HR><BR>
+
+
+<p>5. On Saturdays I <strong>work</strong> from nine to five.</p>
+<div class="ECnoprint">
+<input type="radio" name="q5" value="verb"> verb<br>
+<input type="radio" name="q5" value="preposition"> preposition<br>
+<input type="radio" name="q5" value="adverb"> adverb
+</div><HR><BR>
+
+
+<p>6. I want to go to a <strong>university</strong> in the United States.</p>
+<div class="ECnoprint">
+<input type="radio" name="q6" value="adjective"> adjective<br>
+<input type="radio" name="q6" value="preposition"> preposition<br>
+<input type="radio" name="q6" value="noun"> noun
+</div><HR><BR>
+
+
+<p>7. I'm sure I've <strong>met</strong> your girlfriend before.</p>
+<div class="ECnoprint">
+<input type="radio" name="q7" value="verb"> verb<br>
+<input type="radio" name="q7" value="preposition"> preposition<br>
+<input type="radio" name="q7" value="interjection"> interjection
+</div><HR><BR>
+
+
+<p>8. <strong>Well</strong>, I don't think I'll be home before 6.</p>
+<div class="ECnoprint">
+<input type="radio" name="q8" value="interjection"> interjection<br>
+<input type="radio" name="q8" value="preposition"> preposition<br>
+<input type="radio" name="q8" value="pronoun"> pronoun
+</div><HR><BR>
+
+
+<p>9. Andy knocked on the door <strong>but</strong> nobody answered.</p>
+<div class="ECnoprint">
+<input type="radio" name="q9" value="adverb"> adverb<br>
+<input type="radio" name="q9" value="adjective"> adjective<br>
+<input type="radio" name="q9" value="conjunction"> conjunction
+</div><HR><BR>
+
+
+<p>10. <strong>After</strong> lunch let's go out for a coffee.</p>
+<div class="ECnoprint">
+<input type="radio" name="q10" value="pronoun"> pronoun<br>
+<input type="radio" name="q10" value="preposition"> preposition<br>
+<input type="radio" name="q10" value="verb"> verb
+</div><HR><BR>
+
+
+<div class="ECnoprint">
+
+<p><input name="button" type="button" onclick="getScore(this.form)" value="Check Answer"></p>
+
+<p>Your score is: <input id="qscore" type="text" name="percentage"></p>
+
+<p>Correct answers:<br>
+<textarea name="solutions" wrap="virtual" rows="12"></textarea></p>
+
+<p><input name="reset" type="reset" value="Start Again"></p>
+
+</div>
+
+</form>
+
+</article>
+
+
+
+<script language="JavaScript" type="text/javascript">
+<!--
+var numQues=10;
+var numChoi=3;
+var answers=new Array(10);
+answers[0]="adjective";
+answers[1]="pronoun";
+answers[2]="preposition";
+answers[3]="adverb";
+answers[4]="verb";
+answers[5]="noun";
+answers[6]="verb";
+answers[7]="interjection";
+answers[8]="conjunction";
+answers[9]="preposition";
+function getScore(form){
+var score=0;
+var currElt;
+var currSelection;
+for (i=0; i<numQues; i++){
+currElt=i*numChoi;
+for (j=0; j<numChoi; j++){
+currSelection=form.elements[currElt+j];
+if (currSelection.checked){
+if (currSelection.value==answers[i]){
+score++;
+break;
+}}}}
+score=Math.round(score/numQues*100);
+form.percentage.value=score+"%";
+var correctAnswers="";
+for (i=1; i<=numQues; i++){
+correctAnswers+=i+". "+answers[i-1]+"\r\n";
+}
+form.solutions.value=correctAnswers;
+}
+// -->
+</script>
+
+</main>
+
+
+
+
+
+
+</center>
+
+</aside>
+<br id="ec-break"></div><HR><BR>
+
+
+
+<div class="ECnoprint">
+
+<style>
+footer {background: #333; padding: 1em 0 3em; margin-top: 0; line-height: 200%; font-family: PT Sans, San Francisco, Helvetica Neue, Roboto, Helvetica, Arial, sans-serif; font-size: 16px;}
+footer {color: white}
+footer a{text-decoration:none;color:#ed702b}
+footer li {border-bottom: solid 1px #444}
+footer ul {list-style-type: none;}
+footer p {padding-left: 25px}
+footer h3 {padding-left: 25px}
+footer h3 {color: white; border: 0}
+#footnavbar {margin-top:3em;}
+@media(min-width:767px)
+{
+.footer-wrapper {
+    background-color: #333;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 0;
+}
+footer.ECnoprint {
+    max-width: 970px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+}
+}
+</style>
+
+
