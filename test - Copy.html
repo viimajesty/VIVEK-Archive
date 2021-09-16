@@ -1,0 +1,31 @@
+<form method="" action="">
+  <div class="input-group">
+    <input type="text" id="search" class="form-control" placeholder=".">
+    <span class="input-group-btn"></span>
+                <input type="button" id="submit_form" value="Cari" class="btn btn-primary">
+    </div>
+</form>
+<div>text1</div>
+<div>text2</div><SCRIPT> 
+var ins; document.querySelector('#submit_form')
+  .addEventListener('click', (e) => {
+    e.preventDefault();
+    const query = document.querySelector('#search').value;
+	
+	ing = 'Found: ' + document.body.textContent.includes(query);
+	if (ing == "Found: false") { notfound() }
+else { found() } 
+    });
+
+function found() { 
+const query = document.querySelector('#search').value;
+find(query); 
+}
+
+function notfound() { 
+alert('Bro not found da')
+}
+
+ </SCRIPT>
+ <!--alert('Found: ' + document.body.textContent.includes(query));
+ -->

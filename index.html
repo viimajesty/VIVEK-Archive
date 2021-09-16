@@ -1,0 +1,2131 @@
+<!--
+	THIS CODE IS THE SOLE PROPERTY OF VIVEK ARCHIVE AND ITS BRANCHES. 
+	YOU MAY NOT REUSE, PUBLISH OR DISTRIBUTE THIS CODE WITHOUT PRIOR 
+	PERMISSION FROM VIVEK ARCHIVE OFFICIALS. 
+	
+	IF YOU ARE ALREADY USING THIS CODE, WE ADVISE YOU TO REQUEST OUR 
+	PERMISSION AS SOON AS POSSIBLE, AND SOME OF THIS CODE MAY BE AVAILABLE ON GITHUB FOR YOU TO USE. 
+	
+	UNLESS OTHERWISE NOTED, ALL COMPANIES MENTIONED IN THIS HTML 
+	DOCUMENT ARE HERIN FICTIONAL AND DO NOT REPRESENT ANY REAL
+	COMPANIES.
+	
+	VIVEK ARCHIVE :D
+-->
+
+<!DOCTYPE html> 
+<html lang="en" id="html">
+
+<head>
+<title>VIVEK Archive</title>
+<meta name="description" content="Archive of Notes, Textbooks, and more">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="-1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta http-equiv="refresh" content="3600" >
+<noscript>
+<center>
+<div style="position: fixed; top: 0px; left: 0px; z-index: 30000000; 
+                height: 100%; width: 100%; background-color: #FFFFFF; overflow-y: hidden;"><BR><BR>
+        <B style="margin-left: 10px">JavaScript is not enabled.</B>
+		
+		<P>You must enable JavaScript to use this website.</P>
+		<P>Many features will not function correctly with JavaScript turned off.</P>
+		<P>&nbsp;</P>
+		<P>&nbsp;</P>
+		<P>2021 VIVEK Archive Development Team</P>
+	
+    </div>
+</center>
+</noscript>
+<script src="./scripts/index/index.js?version=8"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyBoE4vsDQKqhgGbJMgQUqSdABqZGJ6ujJs",
+    authDomain: "archive-vivek.firebaseapp.com",
+    databaseURL: "https://archive-vivek-default-rtdb.firebaseio.com",
+    projectId: "archive-vivek",
+    storageBucket: "archive-vivek.appspot.com",
+    messagingSenderId: "577910774104",
+    appId: "1:577910774104:web:c3dc01f31f13c574c9ed2d"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0BFS2QTBQ5"></script>
+<script src="./scripts/index/keyshortcuts.js?version=2"></script>
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="index.css?version=2">
+<meta charset="utf-8">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!--CHECK IF USER IS USING THE DESKTOP VERSION OF VIVEK ARCHIVE-->
+<script type="text/javascript">
+window.onload =  $(document).ready(function() {
+    if (window.location.href.indexOf("?dark") > -1) {
+	invert();
+	revert();
+	}
+	});
+window.onload =  $(document).ready(function() {
+    if (window.location.href.indexOf("?desktop") > -1) {
+	
+		var element = document.createElement("link");
+element.setAttribute("rel", "stylesheet");
+element.setAttribute("type", "text/css");
+element.setAttribute("href", "https://www.w3schools.com/w3css/4/w3.css");
+document.getElementsByTagName("head")[0].appendChild(element);
+	document.getElementById('viv2').style.display = "none"; 
+	document.getElementById('viv').style.display = "block";
+   document.getElementById('userinput').style.height="2.3em";
+	  
+	  
+    } else {
+	
+	document.getElementById('viv').style.display = "none";
+	};
+  });
+</script>
+
+<!--CHECK IF USER WAS RUNNING IN DARK MODE, IF TRUE TURN THE PAGE DARK-->
+<script>
+$(window).on('load', function(){
+
+if (document.cookie.indexOf('dark') > -1 ) { 
+var el = document.getElementById("invert");
+el.value = "Light Mode";
+document.cookie = "theme=dark";
+invert();
+
+}
+});
+
+</script>
+
+<!--DETECT INTERNET EXPLORER, IF TRUE REDIRECT TO NOT SUPPORTED PAGE-->
+<script>
+
+$(window).on('load', function(){
+
+    var ua = window.navigator.userAgent;
+    var msie = ua.indexOf("MSIE ");
+
+    if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))  // If Internet Explorer, return error page
+    {
+        window.location.replace('./err/IE.htm');
+    };
+    
+    
+
+});
+</script>
+
+<!--DETECT MOBILE DEVICE, IF TRUE DISABLE MANY ELEMENTS.-->
+<script>
+$(window).on('load', function(){
+
+
+var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+if (isMobile) {
+  alert('Running mobile');
+  document.getElementById('hideonpc').style.display = "none"; 
+  document.getElementById('hideee').style.display = "none";
+  var g = document.getElementsByClassName('all');
+	var v;
+	for (v = 0; v < g.length; v++) {
+  g[v].style.display = "none"};
+  
+var h = document.getElementsByClassName('cb');
+var w;
+	for (w = 0; w < h.length; w++) {
+  h[w].style.display = "none"};
+
+};
+});
+// SOME DARK MODE FUNCTION I DONT REMEMBER 
+$(window).on('load', function(){
+function checkfor() { 
+if (document.cookie.indexOf('theme') > -1 ) { 
+var el = document.getElementById("invert");
+el.value = "Light Mode";
+document.cookie = "theme=dark";
+invert();
+}
+}
+});
+
+</script>
+
+</head>
+
+<!--MAIN NAVIGATION BAR-->
+<header id="hideonpc">
+	<div class="container">
+        <nav class="nav">
+          <ul class="nav-list nav-list-mobile">
+            <li class="nav-item">
+              <div class="mobile-menu">
+                <span class="line line-top"></span>
+                <span class="line line-bottom"></span>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="index.html" class="nav-link nav-link-apple"></a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-link-bag"></a>
+            </li>
+          <!-- /.nav-list nav-list-mobile -->
+          </ul>
+
+          <ul class="nav-list nav-list-larger">
+            <li class="nav-item nav-item-hidden">
+              <a name="head" href="index.html" class="nav-link nav-link-apple"></a>
+            </li>
+			<li class="nav-item">
+			<a name="head" href="#" class="nav-link" id="a"><input type="button" value="Reload Contents" name="si" onclick="location.reload(true)"></a>
+			</li>
+			<li class="nav-item">
+              <a name="head" href="#" class="nav-link" onclick="alert('Keyboard Shortcuts \n ESC key for Search \n 1 key for Hindi \n 2 key for Eng Lang \n 3 key for Eng Lit \n 4 key for Science \n 5 key for SST \n 6 key for Maths \n 7 key for Sanskrit 3rd Lang \n 8 key for Sanskrit 2nd Lang \n 9 key for Kannada 3rd Lang \n 0 key for Computer Science')">Keyboard <BR>Shortcuts</a>
+            </li>
+            <li class="nav-item">
+              <a name="head" href="help.html" class="nav-link">Help</a>
+            </li>
+            <li class="nav-item">
+              <a name="head" href="captcha.html" class="nav-link">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a name="head" href="./live-editor/inde.html" class="nav-link">HTML Editor</a>
+            </li>
+            
+			
+			
+            
+            <li class="nav-item">
+              <a name="head" href="installer.html" class="nav-link">Teams</a>
+            </li>
+			<li class="nav-item">
+              <a name="head" href="#credits" class="nav-link">Credits</a>
+            </li>
+			<li class="nav-item">
+              <a name="head" href="./notif/notif.html" class="nav-link">Notif</a>
+            </li>
+            <li class="nav-item">
+              <a name="head" href="./faq/faq.html" class="nav-link">FAQ</a>
+            </li> 
+			<li class="nav-item">
+              <a name="head" href="#" class="nav-link" id="a"><input id="invert" type="button" value="Dark Mode" onclick="invert(); revert()" name="si"></a>
+            </li>
+			<li class="nav-item">
+              <a name="head" href="#" class="nav-link" id="a"><button name="darkmode" id="darkmode" onclick="darkmode()"> ? </button></a>
+            </li>
+            <li class="nav-item nav-item-hidden">
+              <a name="head" href="" class="nav-link nav-link-bag"></a>
+            </li>
+			<!--<li class="nav-item"><input name="userinput" id="userinput" placeholder="&nbsp Search this page">&nbsp <input onclick="change(); search()" type="button" value="Find" id="myButton1"></input>-->
+			<div class="wrap">
+   <div class="search">
+      <input name="colors" type="text" class="searchTerm" placeholder="Search" name="userinput" id="userinput" >
+      <input type="button" id="myButton1" value="" class="searchButton" >
+        <i class="fa fa-search"></i>
+     </button>
+	 
+	 
+   </div><small><a name="small" href="#demo">Important!</a></small>
+</div>
+
+
+		<script>
+		var ins; document.querySelector('#myButton1')
+  .addEventListener('click', (e) => {
+    e.preventDefault();
+    const query = document.querySelector('#userinput').value;
+	
+	ing = 'Found: ' + document.body.textContent.includes(query);
+	if (ing == "Found: false") { 
+	alert('The specified string was not found. \nPlease search for the exact word you are looking for.')
+	} else { search() } 
+    });
+	
+
+function search() {
+	var inp = document.getElementById("userinput").value;
+	find(inp);
+	change();}
+	
+	</script>
+          </ul>
+
+        </nav>
+      </div>
+    </header>
+<!--END OF NAVIGATION BAR-->
+	
+<VIVEK>
+
+<P></P><BR id="br"><BR id="br"><BR id="br"><BR id="br">
+<center><iframe id="if" src="lastupdated.htm" frameBorder="0" name="frame" scrolling="no"> </iframe>
+<BR><B>MIDTERM PORTIONS AND TIMETABLE ARE OUT. CLICK TO VIEW: <a id="p1" href="https://d1l59jsi25mzk9.cloudfront.net/Events/CLASS_8_MID_YEAR_PORTIONS1631007992.pdf" target="_blank">Portions</a>&nbsp;|&nbsp;<a id="p2" href="https://d1l59jsi25mzk9.cloudfront.net/Events/VI_VII__VIII_TT1631007993.pdf" target="_blank">Timetable</a>&nbsp;|&nbsp;<a id="p3" href="https://d1l59jsi25mzk9.cloudfront.net/Events/MID_YEAR_VI_VII__VIII_INSTRUCTIONS1631007992.pdf" target="_blank">Instructions</a></B></center>
+<script>
+document.getElementById('if').src += '?' + new Date().getTime();
+</script>
+
+
+
+
+
+
+
+<VIVEK>
+
+
+		<b>&nbsp <button name="switch" id="switch" style="padding: 2px;" onclick="window.open('name.html')">Click here to help make this website better</button></b>
+		
+		
+<BR>
+	<DIV class="hidden2" id="hidden2" style="display: none;">
+<CENTER><DIV class="break2">
+		<P>This website features a Dark Mode, which makes the website dark themed.</P>
+		<P>You can switch back to Light Theme whenever you wish to.</P>
+		<P>Click on the Dark Mode button to try it out :) </P>
+		
+		<BR><BR>
+		<B>Whats New in VIVEK Archive:</B>
+		<P>Dark Mode doesn't invert colors anymore,</P>
+		<P>It's proper Dark Mode. Unlike before.</P>
+		<P>Once a Dark Mode user, always a Dark Mode user. ( your settings are stored )</P>
+		<P>Internet Explorer is no more supported, switch to another browser.</P>
+		<P>	Reload/Refresh Content button added.</P>
+		<P>	Misc content added.</P>
+		<P>	'Everything' subject content added.</P>
+		<P>Fixed Caching issue of iFrame last updated text, causing it to freeze.</P>
+		<P>Removed support for users without JavaScript.</P>
+		<P>Minor code cleanup.</P>
+		<P>Added Keyboard Shortcut for Computer Science (0).</P>
+		<P>Fixed order of Hindi Notes/Textbooks.</P>
+		<P>Added HTTP Refresh to refresh the page every 1 hour.</P>
+		<P>Changed iFrame last updated color to #ff6a00 to look good in dark and light mode.</P>
+		<BR>
+		<BR>
+		<B>To Do: </B>
+		<UL>
+		<LI>Fix browser restart erases stored settings</LI>
+		</UL><BR>
+		<B>Thank you</B><P>&nbsp </P><P>Click on Dismiss to close this</P><BR>
+		<a style="color: white;" href="#" onclick="darkmode()">Dismiss</a>
+		
+	</CENTER></DIV>
+	</DIV>
+
+ 
+
+
+
+</head>
+
+<!--Page removed-->
+<div class="footer3" id="pageremoved" style="display: none;">
+<TABLE style="color: white;">
+<tr>
+<td>The page you requested was removed.</td><td style="position: relative; left: 70vw;"><button name="ok" style="padding: 2px;" onclick="document.getElementById('pageremoved').style.display = 'none'; window.location.href = 'index.html'">OK</button></td></tr>
+</table>
+</div>
+<script>
+window.onload =  $(document).ready(function() {
+    if (window.location.href.indexOf("?pageremoved") > -1) {
+	document.getElementById('pageremoved').style.display = "block"; 
+	}
+	});
+</script>
+<!--ALL THE HEADINGS AND ALL, TITLE ETC ETC-->
+	<body bgcolor="#e2ecf6" data-new-gr-c-s-check-loaded="14.1015.0" data-gr-ext-installed="">
+		<table width="100%" border="0" cellspacing="2" cellpadding="0">
+			<tbody><tr>
+				
+				<td align="center" valign="top">
+				<sup id="viv2">This site works best on PC and Mac.</sup>
+				<sup id="viv">Desktop Version</sup>
+					<h1>VIVEK Archive</h1>
+					We're Getting There 				
+				</td>
+			</tr>
+		</tbody></table><a name="1"></a>
+<!--SUBJECTS -->
+<center>
+<button onmouseover="showsubjects()" onmouseout="hidesubjects()" style="padding: 2px; margin-top: 1em;" id="hid">Subjects</button></center>
+<div align="center" id="onhov" style="display: none; z-index: 2;" onmouseover="showsubjects()" onmouseout="hidesubjects()" class="onhov" name="onhov"><BR>
+<p name="marge">
+<b><a class="finePrint" href="#1">Hindi (2nd Language)</a></b> &nbsp 
+<b><a class="finePrint" href="#2">English Language</a></b> &nbsp 
+<b><a class="finePrint" href="#3">English Literature</a></b> &nbsp 
+<b><a class="finePrint" href="#4">Science</a></b> &nbsp 
+<b><a class="finePrint" href="#5">SST</a></b> &nbsp 
+<b><a class="finePrint" href="#6">Maths</a></b> &nbsp 
+<b><a class="finePrint" href="#7">Sanskrit (3rd Language)</a></b> &nbsp 
+<br><b><a class="finePrint" href="#8">Sanskrit (2nd Language)</a></b>&nbsp 
+<b><a class="finePrint" href="#9">Kannada (3rd Language)</a></b>&nbsp 
+<b><a class="finePrint" href="#10">Hindi (3rd Language)</a></b>&nbsp 
+<b><a class="finePrint" href="#0">Computer Science</a></b>&nbsp 
+<b><a class="finePrint" href="#misc">Misc</a></b>&nbsp 
+<BR><b><a class="finePrint" href="#everything"><I>Everything</i></a></b>&nbsp 
+</p>
+<p></div>
+<!--END OF SUBJECTS-->
+<BR>
+
+<!--SOME FILTER THING I WAS WORKING ON-->
+<!--<hr style="width: 200px; border: 1px solid black; margin-left: 20px;">
+<P style="margin-left: 20px; display: inline;">Filter by: &nbsp </P><select><option>No Filter</option><option>Options Coming Soon</option></select>
+<hr style="width: 200px; border: 1px solid black; margin-left: 20px; margin-top: 1px;">-->
+
+
+<!--HINDI-->	
+<h2 name="space">Hindi as 2nd Language</h2>
+<table name="spacing" width="100%" border="1" bordercolor="#CCCCCC" bgcolor="#ffffff" cellspacing="0" cellpadding="1">
+<tbody><tr>
+<th width="25%">Name</th>
+
+<th width="17%" class="cb">Contributed by</th>
+<th width="7%">Type</th>
+<th width="25%">Download</th>
+</tr>
+
+<tr>
+<td>Dan Bal ( new: higher res )</TD>
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/dan-bal.pdf"><b>Download</b></a>&nbsp dan-bal.pdf 3.4 MB</td>
+</tr>
+<tr>
+<td>Dan Bal</TD>
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/textbooks/dan-bal-tb.pdf"><b>Download</b></a>&nbsp dan-bal-tb.pdf 1.4 MB</td>
+</tr>
+
+
+
+<tr>
+<td>Tyag Ka Samaan</TD>
+<td align="center" class="all">Harshith A</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/tyag-ka-samaan.pdf"><b>Download</b></a>&nbsp tyag-ka-samaan.pdf 25 KB</td>
+</tr>
+<tr>
+<td>Tyag Ka Samaan</TD>
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/textbooks/tyag-ka-samaan-tb.pdf"><b>Download</b></a>&nbsp tyag-ka-samaan-tb.pdf 5.1 MB</td>
+</tr>
+
+<tr>
+<td>Mumbai Ki Barsat</TD>
+<td align="center" class="all">Harshith A</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/mumbai-ki-barsat.pdf"><b>Download</b></a>&nbsp mumbai-ki-barsat.pdf 58 KB</td>
+</tr>
+<tr>
+<td>Mumbai Ki Barsat</TD>
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/textbooks/mumbai-tb.pdf"><b>Download</b></a>&nbsp mumbai-tb.pdf 2.4 MB</td>
+
+</tr>
+
+
+
+<tr>
+<td>Shabd Bhandar PT-1 Portions</TD>
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Portions</td>
+<td><a href="./pdfs/shabd-bhandar-pt1.txt"><b>Download</b></a>&nbsp shabd-bhandar-pt1.txt 1.0 KB</td>
+</tr>
+
+<tr>
+<td>PT1 Revision Worksheet Hindi</TD>
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Worksheet</td>
+<td><a href="./pdfs/hindi-pt1-revision.pdf"><b>Download</b></a>&nbsp hindi-pt1-revision.pdf 47 KB</td>
+</tr>
+
+<tr>
+<td>Budhiya Ke Ashirvad</TD>
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/budhiya_ke_ashirvad.pdf"><b>Download</b></a>&nbsp budhiya_ke_ashirvad.pdf 36 KB</td></tr>
+<tr>
+<td>Budhiya Ke Ashirvad</TD>
+
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/textbooks/budhiya_ke_ashirvad_tb.pdf"><b>Download</b></a>&nbsp budhiya_ke_ashirvad_tb.pdf 7.7 MB</td>
+
+</tr>
+<tr>
+<td>Thele Par Himalay</TD>
+
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/thele_par_himalay.pdf"><b>Download</b></a>&nbsp thele_par_himalay.pdf 40 KB</td>
+
+</tr>
+
+<td>Thele Par Himalay</TD>
+
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/thele-par-himalay-tb.pdf"><b>Download</b></a>&nbsp thele-par-himalay-tb.pdf 2.4 MB</td>
+
+</tr>
+<tr>
+<td>Ambar ki bate kya janu</TD>
+
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/ambar_ki_bate_kya_janu.pdf"><b>Download</b></a>&nbsp ambar_ki_bate_kya_janu.pdf 37 KB</td>
+
+</tr>
+
+<tr>
+<td>Karak</TD>
+
+<td align="center" class="all">Rohit B</td>
+<td align="center">Worksheet</td>
+<td><a href="./pdfs/karak.pdf"><b>Download</b></a>&nbsp karak.pdf 343 KB</td>
+
+</tr>
+
+<tr>
+<td>Karak</TD>
+
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Presentation</td>
+<td><a href="./pdfs/karak-ppt.pdf"><b>Download</b></a>&nbsp karak-ppt.pdf 307 KB</td>
+
+</tr>
+
+<tr>
+<td>Uthsarg and Prathyay Notes</TD>
+
+<td align="center" class="all">Rohit B</td>
+<td align="center">Worksheet</td>
+<td><a href="./pdfs/uthsarg_prathyay.pdf"><b>Download</b></a>&nbsp uthsarg_prathyay.pdf 498 KB</td>
+
+</tr>
+
+<tr>
+<td>Anaupcharik Patr</TD>
+<td align="center" class="all">Sarvesh Saravanan</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/anaupcharik-patr.pdf"><b>Download</b></a>&nbsp anaupcharik-patr.pdf 77 KB</td>
+</tr>
+<tr>
+<td>PT2 Shabd Bhandar </TD>
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Portions</td>
+<td><a href="./pdfs/pt2-shabd-bhandar.txt"><b>Download</b></a>&nbsp pt2-shabd-bhandar.txt 1 KB</td>
+</tr>
+
+<tr>
+<td>PT2 Shabd Arth </TD>
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/textbooks/pt2-shabd-arth.pdf"><b>Download</b></a>&nbsp pt2-shabd-arth.pdf 595 KB</td>
+</tr>
+
+<tr>
+<td>PT2 Shabd Bhandar Scan</TD>
+<td align="center" class="all">Harshith A</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/pt2-shabd-bhandar-tb.pdf"><b>Download</b></a>&nbsp pt2-shabd-bhandar-tb.pdf 2.3 MB</td>
+</tr>
+
+<tr>
+<td>PT2 Moukhik</TD>
+<td align="center" class="all">Nathalia Prince</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/hindi-pt2-moukhik.pdf"><b>Download</b></a>&nbsp hindi-pt2-moukhik.pdf 233 KB</td>
+</tr>
+
+<tr>
+<td>PT2 Revision</TD>
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Worksheet</td>
+<td><a href="./pdfs/pt2-rev-hindi.pdf"><b>Download</b></a>&nbsp pt2-rev-hindi.pdf 50 KB</td>
+</tr>
+<tr>
+<td>Sarvanam</TD>
+<td align="center" class="all">Nathalia Prince</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/sarvanam.png"><b>Download</b></a>&nbsp sarvanam.png 767 KB</td>
+</tr>
+
+<tr>
+<td>Visheshan</TD>
+<td align="center" class="all">Sarvesh Saravanan</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/visheshan.png"><b>Download</b></a>&nbsp visheshan.png 736 KB</td>
+</tr>
+
+<tr>
+<td>Visheshan Complete Notes</TD>
+<td align="center" class="all">Sarvesh Saravanan</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/visheshan.pdf"><b>Download</b></a>&nbsp visheshan.pdf 207 KB</td>
+</tr>
+
+<tr>
+<td>सदाचार का तावीज़.pdf</TD>
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/सदाचार-का-तावीज़.pdf"><b>Download</b></a>&nbsp सदाचार-का-तावीज़.pdf 45 KB</td>
+</tr>
+
+
+<a name="2"></a>
+</tbody></table>
+
+<!--ENG LANG -->
+<table style="width: 100vw;">
+<td><h2 name="space">English Language</h2></td>
+
+<TD align=right><A class="finePrint" 
+      href="#top">Back&nbsp;to&nbsp;Top</A>&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</table>
+<table name="spacing" width="100%" border="1" bordercolor="#CCCCCC" bgcolor="#ffffff" cellspacing="0" cellpadding="1">
+<tbody><tr>
+<th width="25%">Name</th>
+
+<th width="17%" class="cb">Contributed by</th>
+<th width="7%">Type</th>
+<th width="25%">Download</th>
+</tr>
+
+<tr>
+<td>Parts of Speech Worksheet</TD>
+
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Worksheet</td>
+<td><a href="./pdfs/Parts-of-Speech.pdf" download><b>Download</b></a>&nbsp Parts-of-Speech.pdf 321 KB</td>
+
+</tr>
+
+<tr>
+<td>Descriptive Paragraph</TD>
+
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Worksheet</td>
+<td><a href="./pdfs/descriptive-para.pdf" download><b>Download</b></a>&nbsp descriptive-para.pdf 345 KB</td>
+
+</tr>
+
+<tr>
+<td>Determiners</TD>
+
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/Determiners-complete.png"><b>Download</b></a>&nbsp Determiners-complete.png 102 KB</td>
+
+</tr>
+
+<tr>
+<td>Determiners</TD>
+
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Presentation</td>
+<td><a href="./pdfs/determiners.pptx"><b>Download</b></a>&nbsp determiners.pptx 457 KB</td>
+
+</tr>
+
+<tr>
+<td>Modals</TD>
+
+<td align="center" class="all">N/A</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/modals-worksheet.pdf" download><b>Download</b></a>&nbsp error-editing.pdf 292 KB</td>
+
+</tr>
+
+<tr>
+<td>Modals</TD>
+
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/textbooks/modals-tb.pdf" download><b>Download</b></a>&nbsp modals-tb.pdf 418 KB</td>
+
+</tr>
+
+<tr>
+<td>Error Editing and Omission</TD>
+
+<td align="center" class="all">Sarvesh Saravanan</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/error-editing.pdf" download><b>Download</b></a>&nbsp error-editing.pdf 426 KB</td>
+
+</tr>
+
+<tr>
+<td>Tenses</TD>
+
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/Tenses.pdf" download><b>Download</b></a>&nbsp Tenses.pdf 192 KB</td>
+
+</tr>
+
+<tr>
+<td>Question Tags</TD>
+
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/qtags.pdf" download><b>Download</b></a>&nbsp qtags.pdf 366 KB</td>
+
+</tr>
+
+<tr><td>Question Tags</TD>
+
+<td align="center" class="all">Sarvesh Saravanan</td>
+<td align="center">Presentation</td>
+<td><a href="./pdfs/qtags.pptx" download><b>Download</b></a>&nbsp qtags.pptx 5 MB</td>
+
+</tr>
+
+<tr>
+<td>Complaint Letter</TD>
+
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/complaint_letter.pdf" download><b>Download</b></a>&nbsp complaint_letter.pdf 64 KB</td>
+
+</tr>
+
+<tr>
+<td>Adjectives</TD>
+
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/adjectives.pdf" download><b>Download</b></a>&nbsp adjectives.pdf 134 KB</td>
+
+</tr>
+
+
+<tr>
+<td>Conjunctions</TD>
+
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/conjunctions.pdf" download><b>Download</b></a>&nbsp conjunctions.pdf 177 KB</td>
+
+</tr>
+<tr>
+<td>Conjunctions</TD>
+  
+  <td align="center" class="all">Sai Kailash</td>
+  <td align="center">Presentation</td>
+  <td><a href="./pdfs/conjunctions.pptx" download><b>Download</b></a>&nbsp conjunctions.pptx 944 KB</td>
+  
+  </tr>
+
+<tr>
+<td>Error Editing PT2</TD>
+<td align="center" class="all">Sarvesh Saravanan</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/error-editing-pt2.pdf" download><b>Download</b></a>&nbsp error-editing-pt2.pdf 1.4 MB</td>
+
+</tr>
+
+<tr>
+<td>Error Omission PT2</TD>
+<td align="center" class="all">Sarvesh Saravanan</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/error-omission.pdf" download><b>Download</b></a>&nbsp error-omission.pdf 939 KB</td>
+
+</tr>
+
+<tr>
+<td>Error Editing Worksheet</TD>
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Worksheet</td>
+<td><a href="./pdfs/error-editing-worksheet.pdf" download><b>Download</b></a>&nbsp error-editing-worksheet.pdf 163 KB</td>
+
+</tr>
+<tr>
+<td>Notice Writing</TD>
+<td align="center" class="all">Nathalia Prince</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/notice-writing.pdf"><b>Download</b></a>&nbsp notice-writing.pdf 342 KB</td>
+
+</tr>
+<tr>
+<td>Prepositions</TD>
+<td align="center" class="all">Shreya Sahay</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/prepositions.pdf"><b>Download</b></a>&nbsp prepositions.pdf 940 KB</td>
+</tr>
+
+<tr>
+<td>PT2 Revision</TD>
+<td align="center" class="all">Sarvesh Saravanan</td>
+<td align="center">Worksheet</td>
+<td><a href="./pdfs/pt2-lang-rev.pdf"><b>Download</b></a>&nbsp pt2-lang-rev.pdf 187 KB</td>
+
+</tr>
+
+<tr>
+<td>PT2 SEA2</TD>
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Worksheet</td>
+<td><a href="./pdfs/sea2lang.pdf"><b>Download</b></a>&nbsp sea2lang.pdf 78 KB</td>
+</tr>
+
+<tr>
+<td>Formal Letter Writing ( Placing an Order )</TD>
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/formal-letter-writing.pdf"><b>Download</b></a>&nbsp formal-letter-writing.pdf 74 KB</td>
+</tr>
+
+
+
+<a name="3"></a>
+</tbody></table>
+
+<!--ENGLISH LITERATURE-->
+<table style="width: 100vw;">
+<td><h2 name="space">English Literature</h2></td>
+
+<TD align=right><A class="finePrint" 
+      href="#top">Back&nbsp;to&nbsp;Top</A>&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</table>
+<table name="spacing" width="100%" border="1" bordercolor="#CCCCCC" bgcolor="#ffffff" cellspacing="0" cellpadding="1">
+<tbody><tr>
+<th width="25%">Name</th>
+
+<th width="17%" class="cb">Contributed by</th>
+<th width="7%">Type</th>
+<th width="25%">Download</th>
+</tr>
+
+<tr>
+<td>Count of Monte Cristo Chapter 1-5</TD>
+
+<td align="center" class="all">Sai Kailash</td>
+<td align="center"><a href="notes.htm" style="text-decoration: none; color: #0070c9;">NA Notes</a></td>
+<td><a href="./pdfs/count-of-monte.pdf"><b>Download</b></a>&nbsp count-of-monte.pdf 28 KB</td>
+
+</tr>
+
+<tr>
+<td>Count of Monte Cristo Chapter 1-3</TD>
+
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/count-of-monte-tb1.pdf"><b>Download</b></a>&nbsp count-of-monte-tb1.pdf 2 MB</td>
+
+</tr>
+
+<tr>
+<td>Count of Monte Cristo Chapter 4-5</TD>
+
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/count-of-monte-tb2.pdf"><b>Download</b></a>&nbsp count-of-monte-tb2.pdf 7.5 MB</td>
+
+</tr>
+
+<tr>
+<td>Count of Monte Cristo Chapter 6-12</TD>
+
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/count-of-monte-tb3.pdf"><b>Download</b></a>&nbsp count-of-monte-tb3.pdf 16.5 MB</td>
+
+</tr>
+<tr>
+<td>Count of Monte Cristo Chapter 6-15 NOTES</TD>
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center"><a href="notes.htm" style="text-decoration: none; color: #0070c9;">NA Notes</a></td>
+<td><a href="./pdfs/count-of-monte2.pdf"><b>Download</b></a>&nbsp count-of-monte2.pdf 63 KB</td>
+</tr>
+<tr>
+<td>Count of Monte Cristo Chapter 11-15</TD>
+
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/count-of-monte-tb4.pdf"><b>Download</b></a>&nbsp count-of-monte-tb4.pdf 7.6 MB</td>
+
+</tr>
+
+<tr>
+<td>Count of Monte Cristo Chapter 16-19</TD>
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/count-of-monte-tb5.pdf"><b>Download</b></a>&nbsp count-of-monte-tb5.pdf 8.7 MB</td>
+</tr>
+
+<tr>
+<td>Count of Monte Cristo Chapter 20-25 ( new: high res ) </TD>
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/count-of-monte-tb6.pdf"><b>Download</b></a>&nbsp count-of-monte-tb6.pdf 9.3 MB</td>
+</tr>
+
+<tr>
+<td>Count of Monte Cristo Chapter 26-33</TD>
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/count-of-monte-tb7.pdf"><b>Download</b></a>&nbsp count-of-monte-tb7.pdf 12.1 MB</td>
+</tr>
+
+<tr>
+<td>Count of Monte Cristo Chapter 34-38</TD>
+<td align="center" class="all">Yana Garg</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/count-of-monte-tb8.pdf"><b>Download</b></a>&nbsp count-of-monte-tb8.pdf 9.2 MB</td>
+</tr>
+
+<tr>
+<td>Count of Monte Cristo 16 - 30 Notes</TD>
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/count-of-monte3.pdf"><b>Download</b></a>&nbsp count-of-monte3 58 KB</td>
+</tr>
+
+
+
+<tr>
+<td>Young Poets</td>
+
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/young-poets.pdf"><b>Download</b></a>&nbsp young-poets.pdf 49 KB</td></tr>
+
+<tr>
+<td>Julius Caesar</td>
+
+<td align="center" class="all">Sai Kailash</td>
+<td align="center"><a href="notes.htm" style="text-decoration: none; color: #0070c9;">NA Notes</a></a></td>
+<td><a href="./pdfs/julius-caesar.pdf"><b>Download</b></a>&nbsp julius-caesar.pdf 111 KB</td></tr>
+
+<tr>
+<td>Julius Caesar</td>
+
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/julius-caesar-tb.pdf"><b>Download</b></a>&nbsp julius-caesar-tb.pdf 111 KB</td></tr>
+
+<tr>
+<td>Coromandel Fishers</td>
+
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/coromandel-fishers.pdf"><b>Download</b></a>&nbsp coromandel-fishers.pdf 307 KB</td></tr>
+
+<tr>
+<td>Coromandel Fishers</td>
+
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/textbooks/coromandel-fishers-tb.pdf"><b>Download</b></a>&nbsp coromandel-fishers-tb.pdf 8.4 MB</td></tr>
+
+<tr>
+<td>The Open Window</td>
+
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/open-window.pdf"><b>Download</b></a>&nbsp open-window.pdf 71 KB</td></tr>
+
+
+<tr>
+<td>The Open Window Textbook</td>
+
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/textbooks/open-window-tb.pdf"><b>Download</b></a>&nbsp open-window-tb.pdf 1.7 MB</td></tr>
+
+<tr>
+<td>Kabuli wallah</td>
+
+<td align="center" class="all">Yana Garg</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/kabuliwallah.pdf"><b>Download</b></a>&nbsp kabuliwallah.pdf 100 KB</td></tr>
+<tr>
+<td>Kabuli wallah</td>
+
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/kabuliwallah-tb.pdf"><b>Download</b></a>&nbsp kabuliwallah-tb.pdf 4 MB</td></tr>
+
+
+<tr>
+<td>Lord Ullin's Daughter</td>
+<td align="center" class="all">Yashmit Raman</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/lord-ullin-daughter.pdf"><b>Download</b></a>&nbsp lord-ullin-daughter.pdf 90 KB</td>
+</tr>
+<tr>
+<td>Lord Ullin's Daughter</td>
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/lord-ullin-daughter-tb.pdf"><b>Download</b></a>&nbsp lord-ullin-daughter-tb.pdf 1 MB</td>
+</tr>
+
+<tr>
+<td>Merchant of Venice Act 1 Scene 3 Textbook</td>
+<td align="center" class="all">Nathalia Prince</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/merchant-venice-act1-scene3-tb.pdf"><b>Download</b></a>&nbsp merchant-venice-act1-scene3-tb.pdf 1.5 MB</td>
+</tr>
+
+<tr>
+<td>Merchant of Venice Act 1 Scene 3</td>
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/merchant-venice-act1-scene3.pdf"><b>Download</b></a>&nbsp merchant-venice-act1-scene3.pdf 1.5 MB</td>
+</tr>
+
+<tr>
+<td>PT2 Revision</td>
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/pt2-lit-rev.pdf"><b>Download</b></a>&nbsp pt2-lit-rev.pdf 34 KB</td>
+</tr>
+
+<tr>
+<td>Mrs. Flowers</td>
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/mrs-flowers.pdf"><b>Download</b></a>&nbsp mrs-flowers.pdf 97 KB</td>
+</tr>
+
+<tr>
+<td>Mrs. Flowers Textbook</td>
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/mrs-flowers-tb.pdf"><b>Download</b></a>&nbsp mrs-flowers-tb.pdf 4 MB</td>
+</tr>
+
+</tbody></table>
+<a name="4" class="anchor"></a>
+<!--SCIENCE-->
+<table style="width: 100vw;">
+<td><h2 name="space">Science</h2></td>
+
+<TD align=right><A class="finePrint" 
+      href="#top">Back&nbsp;to&nbsp;Top</A>&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</table>
+<table name="spacing" width="100%" border="1" bordercolor="#CCCCCC" bgcolor="#ffffff" cellspacing="0" cellpadding="1">
+<tbody><tr>
+<th width="25%">Name</th>
+
+<th width="17%" class="cb">Contributed by</th>
+<th width="7%">Type</th>
+<th width="25%">Download</th>
+</tr>
+
+<tr>
+<td>Man Made Materials</td>
+
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/man-made-materials.pdf" download"><b>Download</b></a>&nbsp man-made-materials.pdf 52 KB</td>
+</tr>
+
+
+<tr>
+<td>Man Made Materials</td>
+
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/textbooks/man-made-tb.pdf" download"><b>Download</b></a>&nbsp man-made-tb.pdf 5.7 MB</td>
+</tr>
+
+<tr>
+<td>Man Made Materials</td>
+
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Presentation</td>
+<td><a href="./pdfs/manmade.pptx" download"><b>Download</b></a>&nbsp manmade.pptx 6.6 MB</td>
+</tr>
+
+<tr>
+<td>Cell</td>
+
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/cell.pdf" download"><b>Download</b></a>&nbsp cell.pdf 64 KB</td>
+</tr>
+
+<tr>
+<td>Force and Pressure</td>
+
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/force-pressure.pdf" download"><b>Download</b></a>&nbsp force-pressure.pdf 197 KB</td>
+</tr>
+
+<tr>
+<td>Force and Pressure textbook</td>
+
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/force-pressure-tb.pdf" download"><b>Download</b></a>&nbsp force-pressure-tb.pdf 9 MB</td>
+</tr>
+
+<tr>
+<td>Metals and Non Metals</td>
+
+<td align="center" class="all">Rohit B</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/metals-non-metals.pdf" download"><b>Download</b></a>&nbsp metals-non-metals.pdf 52 KB</td>
+</tr>
+
+<tr>
+<td>Metals and Non Metals Textbook</td>
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/metals-non-metals-tb.pdf" download"><b>Download</b></a>&nbsp metals-non-metals-tb.pdf 13.6 MB</td>
+</tr>
+
+<tr>
+<td>Microorganisms: Friends or Foes?</td>
+<td align="center" class="all">Nathalia Prince</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/microorganisms-friends-foes.pdf" download"><b>Download</b></a>&nbsp microorganisms-friends-foes.pdf 190 KB</td>
+</tr>
+
+<tr>
+<td>Microorganisms: Friends or Foes?</td>
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/microorganisms-friends-foes-tb.pdf" download"><b>Download</b></a>&nbsp microorganisms-friends-foes-tb.pdf 7.2 MB</td>
+</tr>
+
+<tr>
+<td>Science PT2 Revision</td>
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Worksheet</td>
+<td><a href="./pdfs/science-pt2-revision.pdf" download"><b>Download</b></a>&nbsp science-pt2-revision.pdf 97 KB</td>
+</tr>
+
+<tr>
+<td>Symbols and Valencies </td>
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/pt2-symbols-valencies.pdf" download"><b>Download</b></a>&nbsp pt2-symbols-valencies.pdf 123 KB</td>
+</tr>
+
+<tr>
+<td>PT2 SEA2 </td>
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Worksheet</td>
+<td><a href="./pdfs/sci-pt2-sea2.pdf"><b>Download</b></a>&nbsp sci-pt2-sea2.pdf 120 KB</td>
+</tr>
+
+<tr>
+<td>Light </td>
+<td align="center" class="all">Sarvesh Saravanan</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/light.pdf"><b>Download</b></a>&nbsp light.pdf 903 KB</td>
+</tr>
+<tr>
+<td>Light Textbook</td>
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/light-tb.pdf"><b>Download</b></a>&nbsp light-tb.pdf 11.1 MB</td>
+</tr>
+<tr>
+<td>PT2 Lab Activity</td>
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Worksheet</td>
+<td><a href="./pdfs/sci-pt2-lab.pdf"><b>Download</b></a>&nbsp sci-pt2-lab.pdf 108 KB</td>
+</tr>
+
+<tr>
+<td>Agriculture</td>
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/agriculture.pdf"><b>Download</b></a>&nbsp agriculture.pdf 136 KB</td>
+</tr>
+
+<tr>
+<td>Agriculture Textbook</td>
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/agriculture-tb.pdf"><b>Download</b></a>&nbsp agriculture-tb.pdf 11.2 MB</td>
+</tr>
+
+
+<a name="5"></a>
+</tbody></table>
+
+<!--SST-->
+<table style="width: 100vw;">
+<td><h2 name="space">SST</h2></td>
+
+<TD align=right><A class="finePrint" 
+      href="#top">Back&nbsp;to&nbsp;Top</A>&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</table>
+<table name="spacing" width="100%" border="1" bordercolor="#CCCCCC" bgcolor="#ffffff" cellspacing="0" cellpadding="1">
+<tbody><tr>
+<th width="25%">Name</th>
+
+<th width="17%" class="cb">Contributed by</th>
+<th width="7%">Type</th>
+<th width="25%">Download</th>
+</tr>
+
+
+<tr>
+<td>Complete CIVICS Textbook (Social and Political Life)</td>
+
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/social-political-life.zip"><b>Download</b></a>&nbsp social-political-life.zip 26 MB</td>
+</tr>
+
+<tr>
+<td>Complete GEOGRAPHY Textbook (Resource and Development)</td>
+
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/resources-and-development.zip"><b>Download</b></a>&nbsp resources-and-development.zip 14 MB</td>
+</tr>
+<tr>
+<td>Complete HISTORY Textbook (Our Pasts - 3)</td>
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/history-8th-grade.zip"><b>Download</b></a>&nbsp history-8th-grade.zip 31 MB</td>
+</tr>
+<tr>
+<td>From Trade to Territory Timeline</td>
+
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Timeline</td>
+<td><a href="./pdfs/trade-to-territory-tl.pdf" download"><b>Download</b></a>&nbsp trade-to-territory-tl.pdf 84 KB</td>
+</tr>
+
+<tr>
+<td>From Trade to Territory </td>
+
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/trade-to-territory.pdf" download"><b>Download</b></a>&nbsp trade-to-territory.png 154 KB</td>
+</tr>
+
+<tr>
+<td>From Trade to Territory Dates</td>
+
+<td align="center" class="all">Yana Garg</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/dates.txt" download"><b>Download</b></a>&nbsp dates.txt 1 KB</td>
+</tr>
+
+<tr>
+<td>Resources</td>
+
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/resources.pdf"><b>Download</b></a>&nbsp resources.pdf 183 KB</td>
+</tr>
+
+<tr>
+<td>Resources Own Notes</td>
+
+<td align="center" class="all">Harshith A</td>
+<td align="center"><a href="notes.htm" style="text-decoration: none; color: #0070c9;">O Notes</a></td>
+<td><a href="./pdfs/resources_own_notes.pdf" download"><b>Download</b></a>&nbsp resources_own_notes.pdf 901 KB</td>
+</tr>
+
+<tr>
+<td>Resources </td>
+
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/textbooks/resources-tb.pdf" download"><b>Download</b></a>&nbsp resources-tb.pdf 1.1 MB</td>
+</tr>
+
+<tr>
+<td>PT1 SEA1 </td>
+
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Worksheet</td>
+<td><a href="./pdfs/sst-pt1-sea1.pdf"><b>Download</b></a>&nbsp sst-pt1-sea1 66 KB</td>
+</tr>
+
+<tr>
+<td>The Indian Constitution</td>
+
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/indian_constitution.pdf"><b>Download</b></a>&nbsp indian_constitution.pdf 123 KB</td>
+</tr>
+
+<tr>
+<td>Land, Soil, Water, Natural Vegetation,  Wildlife Resources</td>
+
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/LandSoilWaterNaturalVegWildlife.pdf"><b>Download</b></a>&nbsp LandSoilWaterNaturalVegWildlife.pdf 112 KB</td>
+</tr>
+
+<tr>
+<td>Land, Soil, Water, Natural Vegetation,  Wildlife Resources with answers</td>
+
+<td align="center" class="all">Sarvesh Saravanan</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/land-soil-resources.pdf"><b>Download</b></a>&nbsp land-soil-resources.pdf 4 MB</td>
+</tr>
+
+
+<tr>
+<td>When People Rebel - 1857 and After</td>
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/when-people-rebel.pdf"><b>Download</b></a>&nbsp when-people-rebel.pdf 118 KB</td>
+</tr>
+
+<tr>
+<td>When People Rebel - 1857 and After with Answers</td>
+<td align="center" class="all">Sarvesh Saravanan</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/when-people-rebel-ans.pdf"><b>Download</b></a>&nbsp when-people-rebel-ans.pdf 4 MB</td>
+</tr>
+
+<tr>
+<td>Understanding Secularism</td>
+<td align="center" class="all">Sarvesh Saravanan</td>
+<td align="center"><a href="notes.htm" style="text-decoration: none; color: #0070c9;">NA Notes</a></a></td>
+<td><a href="./pdfs/understanding-secularism.pdf"><b>Download</b></a>&nbsp understanding-secularism.pdf 35 KB</td>
+</tr>
+
+<tr>
+<td>Understanding Secularism with answers</td>
+<td align="center" class="all">Sarvesh Saravanan</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/understanding-secularism-ans.pdf"><b>Download</b></a>&nbsp understanding-secularism-ans.pdf 3.3 MB</td>
+</tr>
+
+<tr>
+<td>PT2 SEA1</td>
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Worksheet</td>
+<td><a href="./pdfs/sst-pt2-sea1.pdf"><b>Download</b></a>&nbsp sst-pt2-sea1 610 KB</td>
+</tr>
+
+<tr>
+<td>PT2 SST Revision</td>
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Worksheet</td>
+<td><a href="./pdfs/pt2-sst-rev.pdf" download"><b>Download</b></a>&nbsp pt2-sst-rev.pdf 72 KB</td>
+</tr>
+<tr>
+<td>Ruling the Countryside</td>
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/ruling-the-countryside.pdf" download"><b>Download</b></a>&nbsp ruling-the-countryside.pdf 126 KB</td>
+</tr>
+
+<tr>
+<td>Ruling the Countryside with answers</td>
+<td align="center" class="all">Shreya Sahay</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/ruling-the-countryside-ans.pdf" download"><b>Download</b></a>&nbsp ruling-the-countryside-ans.pdf 3.8 MB</td>
+</tr>
+
+<tr>
+<td>Mineral and Power Resources</td>
+<td align="center" class="all">Nathalia Prince</td>
+<td align="center"><a href="notes.htm" style="text-decoration: none; color: #0070c9;">NA Notes</a></td>
+<td><a href="./pdfs/mineral_and_power.pdf" download"><b>Download</b></a>&nbsp mineral_and_power.pdf 1-3 KB</td>
+</tr>
+<a name="6"></a>
+</tbody></table>
+
+<!--MATHS-->
+<table style="width: 100vw;">
+<td><h2 name="space">Maths</h2></td>
+
+<TD align=right><A class="finePrint" 
+      href="#top">Back&nbsp;to&nbsp;Top</A>&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</table>
+<table name="spacing" width="100%" border="1" bordercolor="#CCCCCC" bgcolor="#ffffff" cellspacing="0" cellpadding="1">
+<tbody><tr>
+<th width="25%">Name</th>
+
+<th width="17%" class="cb">Contributed by</th>
+<th width="7%">Type</th>
+<th width="25%">Download</th>
+</tr>
+
+<tr>
+<td>Complete Maths Textbook 8th Grade</td>
+
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Textbook</td>
+<td><a href="https://drive.google.com/uc?export=download&id=1mvXm-IuuFiRwW5Lve2o9LcYq-1jQFjwB"><b>Download</b></a>&nbsp math-8-ncert.zip 13.7 MB</td>
+</tr>
+
+<tr>
+<td>Weekend Assignment 18th June</td>
+
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Homework</td>
+<td><a href="./pdfs/weekend-assignment1.pdf" download"><b>Download</b></a>&nbsp weekend-assignment1.pdf 98 KB</td>
+</tr>
+
+<tr>
+<td>Weekend Assignment 1 Solution</td>
+
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Homework</td>
+<td><a href="./pdfs/weekend-assignment1-sol.pdf" download"><b>Download</b></a>&nbsp weekend-assignment1-sol.pdf 998 KB</td>
+</tr>
+
+<tr>
+<td>Weekend Assignment 25th June</td>
+
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Homework</td>
+<td><a href="./pdfs/weekend-assignment2.pdf" download"><b>Download</b></a>&nbsp weekend-assignment2.pdf 149 KB</td>
+</tr>
+
+<tr>
+<td>Weekend Assignment 2 Solution</td>
+
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Homework</td>
+<td><a href="./pdfs/weekend-assignment2-sol.pdf" download"><b>Download</b></a>&nbsp weekend-assignment2-sol.pdf 163 KB</td>
+</tr>
+
+<tr>
+<td>Weekend Assignment 3rd July</td>
+<td align="center" class="all">Sarvesh Saravanan</td>
+<td align="center">Homework</td>
+<td><a href="./pdfs/weekend-assignment3.pdf" download"><b>Download</b></a>&nbsp weekend-assignment3.pdf 120 KB</td>
+</tr>
+
+
+<tr>
+<td>Weekend Assignment 16th July</td>
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Homework</td>
+<td><a href="./pdfs/weekend-assignment4.pdf" download"><b>Download</b></a>&nbsp weekend-assignment4.pdf 101 </td>
+</tr>
+
+<tr>
+<td>Weekend Assignment 4 Solution</td>
+<td align="center" class="all">Nathalia Prince</td>
+<td align="center">Homework</td>
+<td><a href="./pdfs/weekend-assignment4-sol.pdf" download"><b>Download</b></a>&nbsp weekend-assignment4-sol.pdf 124 KB</td>
+</tr>
+
+<tr>
+<td>Weekend Assignment 5 23rd July</td>
+
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Homework</td>
+<td><a href="./pdfs/weekend-assignment5.pdf" download"><b>Download</b></a>&nbsp weekend-assignment5.pdf 79 KB</td>
+</tr>
+
+<tr>
+<td>Weekend Assignment 5 Solution</td>
+
+<td align="center" class="all">Nathalia Prince</td>
+<td align="center">Homework</td>
+<td><a href="./pdfs/weekend-assignment5-sol.pdf" download"><b>Download</b></a>&nbsp weekend-assignment5-sol.pdf 74 KB</td>
+</tr>
+
+<tr>
+<td>Weekend Assignment 6 31rd July</td>
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Homework</td>
+<td><a href="./pdfs/weekend-assignment6.pdf" download"><b>Download</b></a>&nbsp weekend-assignment6.pdf 137 KB</td>
+</tr>
+
+<tr>
+<td>Weekend Assignment 6 Solution</td>
+<td align="center" class="all">Sarvesh Saravanan</td>
+<td align="center">Homework</td>
+<td><a href="./pdfs/weekend-assignment6-sol.pdf" download"><b>Download</b></a>&nbsp weekend-assignment6-sol.pdf 1.1 MB</td>
+</tr>
+
+<tr>
+<td>Weekend Assignment 7 8th August // PT2 Revision</td>
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Homework</td>
+<td><a href="./pdfs/weekend-assignment7.pdf" download"><b>Download</b></a>&nbsp weekend-assignment7.pdf 95 KB</td>
+</tr>
+
+
+<tr>
+<td>Understanding Quadrilaterals Practise Exercise PT2</td>
+<td align="center" class="all">Sam Mathew</td>
+<td align="center">Worksheet</td>
+<td><a href="./pdfs/understanding-quadrilaterals-practise.pdf" download"><b>Download</b></a>&nbsp understanding-quadrilaterals-practise.pdf 724 KB</td>
+</tr>
+
+<tr>
+<td>Weekend Assignment 8 </td>
+<td align="center" class="all">Nathalia Prince</td>
+<td align="center">Worksheet</td>
+<td><a href="./pdfs/weekend-assignment8.pdf" download"><b>Download</b></a>&nbsp weekend-assignment8.pdf 150 KB</td>
+</tr>
+
+<tr>
+<td>Weekend Assignment 9 </td>
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Worksheet</td>
+<td><a href="./pdfs/weekend-assignment9.pdf" download"><b>Download</b></a>&nbsp weekend-assignment9.pdf 107 KB</td>
+</tr>
+<tr>
+<td>Midterm Revision</td>
+<td align="center" class="all">Sarvesh Saravanan</td>
+<td align="center">Worksheet</td>
+<td><a href="./pdfs/midterm-math-revision.pdf" download"><b>Download</b></a>&nbsp midterm-math-revision.pdf 4.1 MB</td>
+</tr>
+<a name="7"></a>
+</tbody></table>
+
+<!--SANSKRIT 3RD LANG-->
+<table style="width: 100vw;">
+<td><h2 name="space">Sanskrit as 3rd Language</h2></td>
+
+<TD align=right><A class="finePrint" 
+      href="#top">Back&nbsp;to&nbsp;Top</A>&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</table>
+<table name="spacing" width="100%" border="1" bordercolor="#CCCCCC" bgcolor="#ffffff" cellspacing="0" cellpadding="1">
+<tbody><tr>
+<th width="25%">Name</th>
+
+<th width="17%" class="cb">Contributed by</th>
+<th width="7%">Type</th>
+<th width="25%">Download</th>
+</tr>
+
+<tr>
+<td>Shabdas and Lat Lakar and Numbers</td>
+
+<td align="center" class="all">N/A</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/shabdas-lat-numbers.pdf" download"><b>Download</b></a>&nbsp shabdas-lat-numbers.pdf 816 KB</td>
+</tr>
+
+<tr>
+<td>Mahatma Gandhi</td>
+
+<td align="center" class="all">N/A</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/Mahatma.pdf" download"><b>Download</b></a>&nbsp Mahatma.pdf 34 KB</td>
+</tr>
+
+<tr>
+<td>Mahatma Gandhi</td>
+
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/Mahatma-tb.pdf" download"><b>Download</b></a>&nbsp Mahatma-tb.pdf 784 KB</td>
+</tr>
+
+
+<tr>
+<td>Fruit Names</td>
+
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/sans-fruit.pdf" download"><b>Download</b></a>&nbsp sans-fruit.pdf 114 KB</td>
+</tr>
+
+<tr>
+<td>Chatra Sanvad</td>
+
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/chatra-sanvad.pdf" download"><b>Download</b></a>&nbsp chatra-sanvad.pdf 1.7 MB</td>
+</tr>
+
+<tr>
+<td>Chatra Sanvad Notes</td>
+
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/chatra-sanvad-notes.pdf" download"><b>Download</b></a>&nbsp chatra-sanvad-notes.pdf 221 KB</td>
+</tr>
+
+<tr>
+<td>लृट् लकारः</td>
+
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/लृट् लकारः.pdf" download"><b>Download</b></a>&nbsp लृट् लकारः.pdf 310 KB</td>
+</tr>
+
+
+<tr>
+<td>Nitivachanani</td>
+
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/nitivachanani.pdf" download"><b>Download</b></a>&nbsp nitivachanani.pdf 75 KB</td>
+</tr>
+
+<tr>
+<td>Nitivachanani</td>
+
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/nitivachanani-tb.pdf" download"><b>Download</b></a>&nbsp nitivachanani-tb.pdf 1.2 MB</td>
+</tr>
+
+<tr>
+<td>PT2 Sankhya सङ्ंख्याः ( 20 to 40 )</td>
+
+<td align="center" class="all">Sparsh Jain</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/sankhya-sans.pdf" download"><b>Download</b></a>&nbsp sankhya-sans.pdf 330 KB</td>
+</tr>
+
+<tr>
+<td>PT2 Asmad and Vismad Shabd अस्मद्  & युष्मद्</td>
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/अस्मद्_युष्मद्_शब्दौ.pdf" download"><b>Download</b></a>&nbsp अस्मद्_युष्मद्_शब्दौ.pdf 412 KB</td>
+</tr>
+
+<tr>
+<td>PT2 Question Paper Pattern</td>
+
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/pt2-sans-pattern.pdf" download"><b>Download</b></a>&nbsp pt2-sans-pattern.pdf 98 KB</td>
+</tr>
+
+<tr>
+<td>सड्घे शक्ति: युगे-युगे</td>
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/सड्घे-शक्ति-युगे-युगे.pdf" download"><b>Download</b></a>&nbsp सड्घे-शक्ति-युगे-युगे.pdf 227 KB</td>
+</tr>
+
+<tr>
+<td>पर्यायपदानि </td>
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/सड्घे-शक्ति-युगे-युगे.pdf" download"><b>Download</b></a>&nbsp सड्घे-शक्ति-युगे-युगे.pdf 227 KB</td>
+</tr>
+
+<a name="8"></a>
+</tbody></table>
+
+<!--SANSKRIT 2ND LANG-->
+<table style="width: 100vw;">
+<td><h2 name="space">Sanskrit as 2nd Language</h2></td>
+
+<TD align=right><A class="finePrint" 
+      href="#top">Back&nbsp;to&nbsp;Top</A>&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</table>
+<table name="spacing" width="100%" border="1" bordercolor="#CCCCCC" bgcolor="#ffffff" cellspacing="0" cellpadding="1">
+<tbody><tr>
+<th width="25%">Name</th>
+
+<th width="17%" class="cb">Contributed by</th>
+<th width="7%">Type</th>
+<th width="25%">Download</th>
+</tr>
+
+<tr>
+<td>PT1 SEA1</td>
+
+<td align="center" class="all">Vineet Krishna</td>
+<td align="center">SEA</td>
+<td><a href="./pdfs/sans-second/PT1-SEA1.pdf" download"><b>Download</b></a>&nbsp PT1-SEA1.pdf 23 KB</td>
+</tr>
+
+<tr>
+<td>Lobo Na Kartavya</td>
+
+<td align="center" class="all">Vineet Krishna</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/sans-second/lobo-na.pdf" download"><b>Download</b></a>&nbsp lobo-na.pdf 36 KB</td>
+</tr>
+
+<tr>
+<td>Lobo Na Kartavya</td>
+
+<td align="center" class="all">Vineet Krishna</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/sans-second/lobo-na-tb.pdf" download"><b>Download</b></a>&nbsp lobo-na-tb.pdf 3.1 MB</td>
+</tr>
+
+<tr>
+<td>Kthva Pratyaya & Tumun Pratyaya</td>
+
+<td align="center" class="all">Vineet Krishna</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/sans-second/kthva-tumun.pdf" download"><b>Download</b></a>&nbsp kthva-tumun.pdf 28 KB</td>
+</tr>
+<tr>
+<td>Kaarakavibhakti & Upapadvibhakti</td>
+
+<td align="center" class="all">Vineet Krishna</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/sans-second/kaarakavibhakti.pdf" download"><b>Download</b></a>&nbsp kaarakavibhakti.pdf 148 KB</td>
+</tr>
+
+<tr>
+<td>Jashtva Sandhi</td>
+
+<td align="center" class="all">Vineet Krishna</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/sans-second/jashtva-sandhi.pdf" download"><b>Download</b></a>&nbsp jashtva-sandhi.pdf 1 MB</td>
+</tr>
+<tr>
+<td>Idam Shabd</td>
+
+<td align="center" class="all">Vineet Krishna</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/sans-second/idam-shabd.pdf" download"><b>Download</b></a>&nbsp idam-shabd.pdf 2 MB</td>
+</tr>
+
+<tr>
+<td>Lot Lakara</td>
+
+<td align="center" class="all">Vineet Krishna</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/sans-second/lot-lakara.pdf" download"><b>Download</b></a>&nbsp lot-lakara.pdf 2.5 MB</td>
+</tr>
+
+
+<tr>
+<td>विधिलङ् ( आत्मनेपदी)</td>
+<td align="center" class="all">Rahul Reddy</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/sans-second/विधिलङ् ( आत्मनेपदी).pdf"><b>Download</b></a>&nbsp विधिलङ् ( आत्मनेपदी).pdf 604 KB</td>
+</tr>
+
+
+<tr>
+<td>अव्ययानि- Set-1 </td>
+<td align="center" class="all">Rahul Reddy</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/sans-second/अव्ययानि- Set-1 .pdf"><b>Download</b></a>&nbsp अव्ययानि- Set-1 .pdf 499 KB</td>
+</tr>
+
+<tr>
+<td>संस्कृतभाषायाः महत्त्वम्) </td>
+<td align="center" class="all">Rahul Reddy</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/sans-second/संस्कृतभाषायाः महत्त्वम्) .pdf"><b>Download</b></a>&nbsp संस्कृतभाषायाः महत्त्वम्) .pdf 94 KB</td>
+</tr>
+
+<tr>
+<td>जगत्  शब्दः </td>
+<td align="center" class="all">Rahul Reddy</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/sans-second/जगत्  शब्दः.pdf"><b>Download</b></a>&nbsp जगत्  शब्दः.pdf 334 KB</td>
+</tr>
+
+<tr>
+<td>नीतिश्लोकाः </td>
+<td align="center" class="all">Rahul Reddy</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/sans-second/नीतिश्लोकाः .pdf"><b>Download</b></a>&nbsp नीतिश्लोकाः .pdf 298 KB</td>
+</tr>
+
+<tr>
+<td>विशेषण - विशेष्यः</td>
+<td align="center" class="all">Rahul Reddy</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/sans-second/विशेषण - विशेष्यः.pdf"><b>Download</b></a>&nbsp विशेषण - विशेष्यः.pdf 918 KB</td>
+</tr>
+<tr>
+<td>विसर्गलोपः</td>
+<td align="center" class="all">Rahul Reddy</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/sans-second/विसर्गलोपः.pdf"><b>Download</b></a>&nbsp विसर्गलोपः.pdf 55 KB</td>
+</tr>
+
+<tr>
+<td>सङ्ख्यारूपाणि</td>
+<td align="center" class="all">Rahul Reddy</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/sans-second/सङ्ख्यारूपाणि.pdf"><b>Download</b></a>&nbsp सङ्ख्यारूपाणि.pdf 634 KB</td>
+</tr>
+
+<tr>
+<td>स्वामी विवेकानन्दः( अभ्यासः )</td>
+<td align="center" class="all">Rahul Reddy</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/sans-second/स्वामी विवेकानन्दः( अभ्यासः ).pdf"><b>Download</b></a>&nbsp स्वामी विवेकानन्दः( अभ्यासः ).pdf 84 KB</td>
+</tr>
+
+<tr>
+<td>अव्ययानि</td>
+<td align="center" class="all">Rahul Reddy</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/sans-second/Notes_201110_195426_d6f.pdf"><b>Download</b></a>&nbsp Notes_201110_195426_d6f.pdf 1.9 MB</td>
+</tr>
+
+<tr>
+<td>विद्वस् & भवत्   शब्दाः</td>
+<td align="center" class="all">Rahul Reddy</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/sans-second/विद्वस् & भवत्   शब्दाः.pdf"><b>Download</b></a>&nbsp विद्वस् & भवत्   शब्दाः.pdf 637 KB</td>
+</tr>
+
+
+
+<a name="9"></a>
+</tbody></table>
+
+<!--KANNADA 3RD LANG-->
+<table style="width: 100vw;">
+<td><h2 name="space">Kannada as 3rd Language</h2></td>
+
+<TD align=right><A class="finePrint" 
+      href="#top">Back&nbsp;to&nbsp;Top</A>&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</table>
+<table name="spacing" width="100%" border="1" bordercolor="#CCCCCC" bgcolor="#ffffff" cellspacing="0" cellpadding="1">
+<tbody><tr>
+<th width="25%">Name</th>
+
+<th width="17%" class="cb">Contributed by</th>
+<th width="7%">Type</th>
+<th width="25%">Download</th>
+</tr>
+<tr>
+<td>Birbalane Janbe ಬೀರಬಲ್ಲನ ಜಾಣ್ಮೆ</td>
+
+<td align="center" class="all">Sarvesh Saravanan</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/kannada-third/Birbalane_Janbe.pdf"><b>Download</b></a>&nbsp Birbalane_Janbe.pdf 114 KB</td>
+</tr>
+
+<tr>
+<td>Singular Plural</td>
+
+<td align="center" class="all">Sarvesh Saravanan</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/kannada-third/Singular_Plural.pdf"><b>Download</b></a>&nbsp Singular_Plural.pdf 842 KB</td>
+</tr>
+
+<tr>
+<td>Devaru Kottihanu Poem</td>
+
+<td align="center" class="all">Sarvesh Saravanan</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/kannada-third/Devaru_Kottihanu_Poem.pdf"><b>Download</b></a>&nbsp Devaru_Kottihanu_Poem.pdf 1.9 MB</td>
+</tr>
+
+<tr>
+<td>Pronoun Plural Forms</td>
+
+<td align="center" class="all">Sarvesh Saravanan</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/kannada-third/Pronoun_Plural_Forms.pdf"><b>Download</b></a>&nbsp Singular_Plural.pdf 336 KB</td>
+</tr>
+
+<tr>
+<td>Number Names 1 to 20</td>
+
+<td align="center" class="all">Sarvesh Saravanan</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/kannada-third/Number_Names_1_to_20.pdf"><b>Download</b></a>&nbsp Number_Names_1_to_20.pdf 460 KB</td>
+</tr>
+
+<tr>
+<td>Genders</td>
+
+<td align="center" class="all">Sarvesh Saravanan</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/kannada-third/Genders.pdf"><b>Download</b></a>&nbsp Genders.pdf 444 KB</td>
+</tr>
+
+<tr>
+<td>Akbar and Birbal Textbook</td>
+
+<td align="center" class="all">Sarvesh Saravanan</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/kannada-third/Akbar_and_Birbal_Kannada_Chapter.pdf"><b>Download</b></a>&nbsp Akbar_and_Birbal_Kannada_Chapter.pdf 2.1 MB</td>
+</tr>
+
+<tr>
+<td>Devaru Kottihanu</td>
+
+<td align="center" class="all">Sarvesh Saravanan</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/kannada-third/devaru-kottihanu.pdf"><b>Download</b></a>&nbsp devaru-kottihanu.pdf 1 MB</td>
+</tr>
+
+<tr>
+<td>Number Names 21 to 30</td>
+
+<td align="center" class="all">Nathalia Prince</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/kannada-third/number-names-21-30.pdf"><b>Download</b></a>&nbsp number-names-21-30.pdf 68 KB</td>
+</tr>
+
+<tr>
+
+<td>Gubbi Poem</td>
+
+<td align="center" class="all">Nathalia Prince</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/kannada-third/Gubbi-Poem.pdf"><b>Download</b></a>&nbsp Gubbi-Poem.pdf 487 KB</td>
+</tr>
+<tr>
+<td>PT2 Revision</td>
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Worksheet</td>
+<td><a href="./pdfs/kannada-third/pt2-rev.pdf"><b>Download</b></a>&nbsp pt2-rev.pdf 577 KB</td>
+</tr>
+
+<tr><td>ಆರೋಗ್</td>
+<td align="center" class="all">Nathalia Prince</td>
+<td align="center">Worksheet</td>
+<td><a href="./pdfs/kannada-third/ಆರೋಗ್.pdf"><b>Download</b></a>&nbsp ಆರೋಗ್.pdf 700 KB</td>
+</tr>
+
+<a name="10"></a>
+</tbody>
+</table>
+
+<!--HINDI 3RD LANG-->
+<table style="width: 100vw;">
+<td><h2 name="space">Hindi as 3rd Language</h2></td>
+
+<TD align=right><A class="finePrint" 
+      href="#top">Back&nbsp;to&nbsp;Top</A>&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</table>
+<table name="spacing" width="100%" border="1" bordercolor="#CCCCCC" bgcolor="#ffffff" cellspacing="0" cellpadding="1">
+<tbody><tr>
+<th width="25%">Name</th>
+
+<th width="17%" class="cb">Contributed by</th>
+<th width="7%">Type</th>
+<th width="25%">Download</th>
+</tr>
+<TR>
+<td>Apna Ghar अपना-घर</td>
+<td align="center" class="all">Rahul Reddy</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/अपना-घर.pdf"><b>Download</b></a>&nbsp अपना-घर.pdf 21 KB </td>
+</tr>
+<TR>
+<td>Badal Aaye बादल आए (कविता)</td>
+<td align="center" class="all">Rahul Reddy</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/बादल-आए-(कविता).pdf"><b>Download</b></a>&nbsp बादल-आए-(कविता).pdf 47 KB </td>
+</tr>
+
+<TR>
+<td>Emandari Ka Fal ईमानदारी का फल</td>
+<td align="center" class="all">Rahul Reddy</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/ईमानदारी-का-फल.pdf"><b>Download</b></a>&nbsp ईमानदारी-का-फल.pdf 78 KB </td>
+</tr>
+<TR>
+<td>Sangya - Bhed संज्ञा व भेद.</td>
+<td align="center" class="all">Rahul Reddy</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/संज्ञा-व-भेद.pdf"><b>Download</b></a>&nbsp संज्ञा-व-भेद.pdf 40 KB </td>
+</tr>
+
+<a name="0"></a>
+</tbody></table>
+
+<!--COMPUTER-->
+<table style="width: 100vw;">
+<td><h2 name="space">Computer Science</h2></td>
+
+<TD align=right><A class="finePrint" 
+      href="#top">Back&nbsp;to&nbsp;Top</A>&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</table>
+<table name="spacing" width="100%" border="1" bordercolor="#CCCCCC" bgcolor="#ffffff" cellspacing="0" cellpadding="1">
+<tbody><tr>
+<th width="25%">Name</th>
+
+<th width="17%" class="cb">Contributed by</th>
+<th width="7%">Type</th>
+<th width="25%">Download</th>
+</tr>
+
+
+<TR>
+<td>Computer Science Full Textbook</td>
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/comp/decodeit-full.pdf" download><b>Download</b></a>&nbsp decodeit-full.pdf 62 MB </td>
+</tr>
+
+<TR>
+<td>Database Management System ( DBMS ) </td>
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/comp/DBMS.pdf"><b>Download</b></a>&nbsp DBMS.pdf 7.9 MB </td>
+</tr>
+
+<TR>
+<td>Introduction to AI</td>
+<td align="center" class="all">Nathalia Prince</td>
+<td align="center">Notes</td>
+<td><a href="./pdfs/comp/AI-1.pdf"><b>Download</b></a>&nbsp AI-1.pdf 364 KB </td>
+</tr>
+<TR>
+<td>Introduction to AI</td>
+<td align="center" class="all">Vivek Kadre</td>
+<td align="center">Textbook</td>
+<td><a href="./pdfs/comp/intro-to-ai-tb.pdf"><b>Download</b></a>&nbsp intro-to-ai-tb.pdf 7.4 MB </td>
+</tr>
+<a name="misc"></a>
+</tbody></table>
+
+<!--MISC STUFF-->
+<table style="width: 100vw;">
+<td><h2 name="space">Miscellaneous</h2></td>
+
+<TD align=right><A class="finePrint" 
+      href="#top">Back&nbsp;to&nbsp;Top</A>&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</table>
+<table name="spacing" width="100%" border="1" bordercolor="#CCCCCC" bgcolor="#ffffff" cellspacing="0" cellpadding="1">
+<tbody><tr>
+<th width="25%">Name</th>
+<th width="17%" class="cb">Contributed by</th>
+<th width="7%">Type</th>
+<th width="25%">Download</th>
+</tr>
+<TR>
+<td>Holiday List 2021 - 2022</td>
+<td align="center" class="all">Sarvesh Saravanan</td>
+<td align="center">Information</td>
+<td><a href="./pdfs/holiday-list.pdf"><b>Download</b></a>&nbsp holiday-list.pdf 87 KB </td>
+</tr>
+
+<TR>
+<td>Midterm Instructions</td>
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Information</td>
+<td><a href="./pdfs/misc/midterm-instructions.pdf"><b>Download</b></a>&nbsp midterm-instructions.pdf 116 KB </td>
+</tr>
+
+<TR>
+<td>Midterm Timetable</td>
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Information</td>
+<td><a href="./pdfs/misc/midterm-tt.pdf"><b>Download</b></a>&nbsp midterm-tt.pdf 110 KB </td>
+</tr>
+
+<TR>
+<td>Midterm Portions</td>
+<td align="center" class="all">Sai Kailash</td>
+<td align="center">Information</td>
+<td><a href="./pdfs/misc/midterm-portions.pdf"><b>Download</b></a>&nbsp midterm-portions.pdf 114 KB </td>
+</tr>
+
+<a name="everything"></a>
+</tbody></table>
+
+<!--END OF ALL SUBJECTS-->
+
+<!--START OF ZIP DOWNLOADS-->
+<table style="width: 100vw;"><tr>
+<td><h2 name="space"><I>EVERYTHING</I></h2></td>
+<TD align=right><A class="finePrint" 
+      href="#top">Back&nbsp;to&nbsp;Top</A>&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+	  </tr><tr><td><P style="padding-left: 10px;">NOTE: This section may not be up to date. It is <U><I>NOT</I></U> updated each time I add a file.</P></td></tr>
+</table>
+<table name="spacing" width="100%" border="1" bordercolor="#CCCCCC" bgcolor="#ffffff" cellspacing="0" cellpadding="1">
+<tbody><tr>
+<th width="50%">Name</th>
+<th width="50%">Download</th></tr>
+<tr>
+<td>Everything from 8-11-2021</td>
+<td><!--<a href="https://school-archive.s3.jp-osa.cloud-object-storage.appdomain.cloud/pdfs.zip">--><b style="color: grey">Currently Unavailable</b><!--</a>-->&nbsp; pdfs.zip 158 MB; <A class="finePrint" href="#!" onclick="showinfo()">ZIP Archive</a></td>
+<div id="zip" style="height: 70vh;
+    background-color: black;
+	color: white;
+	opacity: 89%;
+	width: 100%;
+	position: absolute;
+	padding-top: 1em; display: none;">
+	<CENTER>
+<h2>ZIP Archives</h2><BR><b>How to use ZIP Archives:</b><BR><BR>
+<UL>
+<LI>On Windows, right-click the file, select Extract All, and enter 'C:\'. The extracted files will go to C:\.</LI><BR>
+<LI>On Mac, double-click the file and the files will automatically extract.</li><BR>
+<LI>Linux is the same as Mac.</LI><BR>
+<LI>On mobile devices, you may not be able to extract files.</LI><BR><BR><a style="color: white;"href="#!" onclick="showinfo()">Dismiss</a></center>
+</div>
+</tr>
+</table></tbody>
+<!--END OF ZIP DOWNLOADS-->
+
+<!--START CREDITS-->
+
+<A NAME="credits"></A><BR><HR><BR>
+
+<center><BR>
+<p>Broken links? PLEASE let me know! <A class="contactme" href="captcha.html">Contact me!</A>
+<br>:)
+</p></center>
+	
+	
+
+<B><P>&nbsp Special Thanks To:</P></B><UL name="bruh">
+<LI>Sai Kailash | 47 Contributions & 2 Errors Reported & Integral Developer</LI>
+<LI>Harshith Reddy A | 5 Contributions & WebMaster</LI>
+<LI>Sarvesh Saravanan | 26 Contributions & 3 Errors Reported</LI>
+<LI>Rahul Reddy | 15 Contributions</LI>
+<LI>Nathalia Prince | 13 Contributions</LI>
+<LI>Vineet Krishna | 8 Contributions</LI>
+<LI>Rohit B | 4 Contributions</LI>
+<LI>Yana Garg | 4 Contributions</LI>
+<LI>Shreya Sahay | 3 Contributions</LI>
+<LI>Yashmit Raman | 2 Contributions</LI>
+<LI>Sparsh Jain | 2 Contributions & 1 Error Reported</LI>
+<LI>Sam Mathew | 2 Contributions</LI>
+<LI>Pratik C Thomas | 3 Errors Reported</LI>
+<LI>Shrihan Vaidya | 2 Errors Reported</LI>
+<LI>Darsh Mishra | 1 Error Reported</LI>
+<BR>
+<LI><a href="contribute.html">Contribute</a></LI>
+</ul>
+
+
+
+<p>&nbsp Website maintained by Vivek Kadre. <script type="text/javascript">var currentTime = new Date() 
+                    var year = currentTime.getFullYear() 
+                    document.write(year)</script> Some rights reserved.</p>
+<p>&nbsp Web mastered by Harshith Reddy A.</p>
+<CENTER>
+<A class="finePrint" 
+      href="#top">Back&nbsp;to&nbsp;Top</A><BR><BR>
+<br>
+<h1>We're Getting There</h1>
+<!--END CREDITS-->
+<BR><HR><BR><div id="demo"></CENTER>
+<h2 name="red">NOTICE</h2><STYLE>h2[name="red"] { color: #CC0000; margin-left: 10px; margin-bottom: 10px;} P[name="indent"] { margin-left: 20px; }</STYLE>
+<P name="indent"> When attempting to search for text/notes/textbooks/worksheets on this website using the search field, <BR> please use the exact word you're searching for.<BR>Thank you. </P><BR><BR>
+
+<h2 name="red">Known Issues</h2><STYLE>h2[name="red"] { color: #CC0000; margin-left: 10px; margin-bottom: 10px;} P[name="indent"] { margin-left: 20px; }</STYLE>
+<P name="indent">Search may not function on certain versions of Safari. A fix is not yet available.<br>If you are affected, frequently check and update your Mac/iPad or switch to a different browser such as Brave, Edge, Chrome or Firefox.</P><BR><BR></DIV>
+<BR>
+<!--VIVEK ARCHIVE LOGO THINGY-->
+<a name="archivelogo"></a><BR><BR><iframe src="ascii.htm" style="width: 100vw; height:60vh;" title="VIVEK Archive" scrolling="no"></iframe><BR>
+<BR>
+<div style="margin-left: 30px;display: flex;">
+<img src="./files/xhtml1.png" height="40" width="100"></img>
+<img src="./files/html5.png" height="40" width="100" style="margin-left:10px;"></img>
+</div>
+<BR><BR><HR><BR><BR>
+
+
+</body>
+
+
+
+</VIVEK>
+</html>

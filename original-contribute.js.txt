@@ -1,0 +1,58 @@
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBoE4vsDQKqhgGbJMgQUqSdABqZGJ6ujJs",
+    authDomain: "archive-vivek.firebaseapp.com",
+    databaseURL: "https://archive-vivek-default-rtdb.firebaseio.com",
+    projectId: "archive-vivek",
+    storageBucket: "gs://archive-vivek.appspot.com",
+    messagingSenderId: "577910774104",
+    appId: "1:577910774104:web:c3dc01f31f13c574c9ed2d"
+  };
+  firebase.initializeApp(config);
+  //-------------------------------------
+
+  var uploader = document.getElementById('uploader');
+  var fileButton =         document.getElementById('fileButton');
+  fileButton.addEventListener('change', function(e){
+  var file = e.target.files[0];
+  var storageRef = firebase.storage().ref('uploads/'+file.name);
+  var task = storageRef.put(file);
+  task.on('state_changed', function progress(snapshot) {
+    var percentage = (snapshot.bytesTransferred/snapshot.totalBytes)*100;
+    uploader.value = percentage;
+
+  }, function error(err) {
+
+
+  },function complete() {
+
+  });
+});
+
+function sendemail() { 
+event.preventDefault(); 
+document.getElementById('show').style.display = "block";
+var email = document.getElementById('email').value
+var name = document.getElementById('name').value 
+var details = document.getElementById('details').value
+ Email.send({
+        Host: "smtp.gmail.com",
+        Username: "donotreply.schoolarchive@gmail.com",
+        Password: "%harviv%",
+        To: 'vivekkadre7@gmail.com',
+        From: "VIVEK@Archive",
+        Subject: "New Contribution",
+        Body: "<h1>VIVEK Archive</h1><HR><br><P>New Contribution!</P><BR><FIELDSET><BR><TABLE><TD>Name: </TD><TD> </TD><TD>" + name + "</TD></TR><TR><TD>Email: </TD> <TD> </TD><TD>" + email + "</TD></TR><TR><TD>Details: </TD> <TD> </TD><TD>" + details + "</TD></TR><BR></FIELDSET><BR><HR><BR><P>PLEASE CHECK FIREBASE STORAGE FOR THE FILE.</P><BR><P>For use by VIVEK Archive only. <BR>This email was sent to you because someone submitted an error form on VIVEK Archive.",
+      })
+        .then(function (message) {
+          window.location.replace('./thankyou/5.htm');
+        });
+    }
+function show() { 
+document.getElementById('hide').style.display = "block";
+}
+window.onload = function checksubmit() { 
+var form = document.getElementById("myForm");
+function handleForm(event) { event.preventDefault(); } 
+form.addEventListener('submit', handleForm);
+}

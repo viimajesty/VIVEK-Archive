@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contribute</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+<style>
+*{
+font-family: verdana; overflow-x: hidden;}
+progress {
+  border-radius: 7px;
+  
+}
+a:link.blah, a:visited.blah { color: #0066cc; text-decoration: none;}
+a:hover.blah { color: #FF0000; cursor: hand; text-decoration: underline; }
+
+div[name="show"] { 
+	height: 90vh;
+    background-color: black;
+	color: white;
+	opacity: 89%;
+	width: 100%;
+	position: absolute;
+	padding-top: 1em;
+}
+</style>
+<div id="show" name="show" style="display: none;"><center>
+<img src="loading.gif"></img></center>
+</div>
+		<h2 align="left">Contribute to VIVEK Archive!</h2>
+		<a href="index.html" class="blah">Return to home?</a>
+		<BR><BR>
+		
+<fieldset><form onsubmit="sendemail()" id="myForm">
+		<P>Choose the file to send<SUP>*</SUP>&nbsp;<BR>Please wait for the grey bar below to turn fully green before clicking send. </P>
+		<progress id="uploader" value="0" max="100">0%</progress>
+		<input type="file" id="fileButton" value="upload" required=""/>
+		
+		<P>Your full name<SUP>*</SUP></P>
+		<input type="text" id="name" required=""></input>
+		<P>Your email address<SUP>*</SUP></P>
+		<input type="email" id="email" required=""></input><BR>
+		<P>Details of the file ( Name, spelling, title, description, etc )<SUP>*</SUP> </P>
+		<textarea type="text" id="details" required="" ></textarea>
+		<HR width="600px" align="left">
+		
+		<button type="submit">Send!</button>
+		</form>
+
+</fieldset>
+<script src="contribute.js?version=2"></script>
+
+
+
+<BR><HR><BR>
+<P class="sosumi"><B>Please Note: </B>If the name and/or email address you provide is not valid, your contribution may not be accepted.<BR><B>Also see: </B> <a href="#" onclick="show()" class="blah">Terms of use</a></P>
+<BR><BR>
+<P class="sosumi" style="display: none;" id="hide">If your provided name is incorrect, VIVEK Archive may still use the file you sent.<BR>All files uploaded to VIVEK Archive are checked by VirusTotal.</P>
+</body>
+</html>

